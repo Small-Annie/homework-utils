@@ -1,13 +1,13 @@
 <?php
 
 require("src/StringUtils.php");
+require("vendor/autoload.php");
 
-if (StringUtils\capitalize('hello') !== 'Hello') {
-    throw new \Exception('Функция работает неверно!');
-}
+use Webmozart\Assert\Assert;
+use function StringUtils\capitalize;
 
-if (StringUtils\capitalize('') !== '') {
-    throw new \Exception('Функция работает неверно!');
-}
+Assert::eq(capitalize(''), '');
+Assert::eq(capitalize('how are you?'), 'How are you?');
+Assert::notEq(capitalize('hello'), 'hello');
 
 echo 'Все тесты пройдены!';
