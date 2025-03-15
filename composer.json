@@ -1,0 +1,12 @@
+{
+    "name": "petr/homework-utils",
+    "require": {
+        "webmozart/assert": "^1.11"
+    },
+    "authors": [
+        {
+            "name": "Petrova Anna",
+            "email": "petr230999@gmail.com"
+        }
+    ]
+}
